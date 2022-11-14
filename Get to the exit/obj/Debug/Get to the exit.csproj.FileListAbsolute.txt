@@ -1,0 +1,8 @@
+C:\Users\feder\source\repos\Get to the exit\Get to the exit\bin\Debug\Get to the exit.exe.config
+C:\Users\feder\source\repos\Get to the exit\Get to the exit\bin\Debug\Get to the exit.exe
+C:\Users\feder\source\repos\Get to the exit\Get to the exit\bin\Debug\Get to the exit.pdb
+C:\Users\feder\source\repos\Get to the exit\Get to the exit\obj\Debug\Get to the exit.csproj.AssemblyReference.cache
+C:\Users\feder\source\repos\Get to the exit\Get to the exit\obj\Debug\Get to the exit.csproj.SuggestedBindingRedirects.cache
+C:\Users\feder\source\repos\Get to the exit\Get to the exit\obj\Debug\Get to the exit.csproj.CoreCompileInputs.cache
+C:\Users\feder\source\repos\Get to the exit\Get to the exit\obj\Debug\Get to the exit.exe
+C:\Users\feder\source\repos\Get to the exit\Get to the exit\obj\Debug\Get to the exit.pdb
