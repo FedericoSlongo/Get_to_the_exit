@@ -2,5 +2,7 @@
 You have to get to the exit  
 A simple c# cli little adventure  
 Currently under development  
-*Game : 0%  
-*System under the game : ~= 30%
+<ul>
+<li>Game : 0%  </li>
+<li>System under the game : ~= 30%  </li>
+</ul>
