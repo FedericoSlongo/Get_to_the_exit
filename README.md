@@ -4,5 +4,5 @@ A simple c# cli little adventure
 Currently under development  
 <ul>
 <li>Game : 0%  </li>
-<li>System under the game : ~= 30%  </li>
+<li>System under the game : ~= 55%  </li>
 </ul>
