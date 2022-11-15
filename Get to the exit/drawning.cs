@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -17,6 +17,11 @@ namespace Get_to_the_exit
         public int[] x_pres_plt, y_pres_plt;
         //Position of the walls
         public int[] x_wall, y_wall;
+        //Position of the door
+        public int x_door = 7, y_door = 20;
+        //If the door is open it's true
+        public bool door_open = false;
+
         //When you create the class you it creates the amounts of boxes and pressure plates neccesary
         public drawning(int am_box_pre, int am_of_wall)
         {
@@ -53,6 +58,11 @@ namespace Get_to_the_exit
                 Console.SetCursorPosition(i, 15);
                 Console.Write("■");
             }
+            if (door_open)
+            {
+                Console.SetCursorPosition(x_door, y_door);
+                Console.Write(" ");
+            }
         }
         //Draws cube at the specified points
         public void draw_cube(int lunghezza, int altezza)
@@ -62,12 +72,12 @@ namespace Get_to_the_exit
                 Console.SetCursorPosition(lunghezza + i, altezza);
                 Console.Write("■");
             }
-            for (int j = 0; j < 10; j++)
+            for (int j = 0; j < 15; j++)
             {
                 Console.SetCursorPosition(lunghezza, altezza + j);
                 Console.Write("■");
             }
-            for (int j = 0; j < 10; j++)
+            for (int j = 0; j < 15; j++)
             {
                 Console.SetCursorPosition(lunghezza + 20, altezza + j);
                 Console.Write("■");
@@ -76,6 +86,11 @@ namespace Get_to_the_exit
             {
                 Console.SetCursorPosition(lunghezza + i, altezza + 15);
                 Console.Write("■");
+            }
+            if (door_open)
+            {
+                Console.SetCursorPosition(x_door, y_door);
+                Console.Write(" ");
             }
         }
         //Draws player
@@ -117,6 +132,32 @@ namespace Get_to_the_exit
             for (int i = 0; i < x_wall.Length; i++)
                 if (!((x_plyr == x_wall[i]) && (y_plyr == y_wall[i])))
                     return false;
+            return true;
+        }
+
+        //Checks if the player as exited
+        public bool asExited()
+        {
+            if (!((x_plyr == x_door) && (y_plyr == y_door)))
+                vicory_scree();
+            return false;
+        }
+        //Prints Win screen
+        public bool vicory_scree()
+        {
+            Console.Clear();
+            string vict = "■■■■■■■■■■■■■■■■■■■■■";
+            int screen_height = (Console.WindowHeight / 2) - 1, screen_width = (Console.WindowWidth / 2) - vict.Length / 2;
+            Console.SetCursorPosition(screen_width, screen_height);
+            Console.Write(vict);
+            screen_height++;
+            vict = "■■ !!! YOU WON !!! ■■";
+            Console.SetCursorPosition(screen_width, screen_height);
+            Console.Write(vict);
+            screen_height++;
+            vict = "■■■■■■■■■■■■■■■■■■■■■";
+            Console.SetCursorPosition(screen_width, screen_height);
+            Console.Write(vict);
             return true;
         }
     }
