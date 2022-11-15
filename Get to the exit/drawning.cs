@@ -127,10 +127,10 @@ namespace Get_to_the_exit
             }
         }
         //Checks if the player is inside a wall
-        public bool isValid()
+        public bool isValid(int x, int y)
         {
             for (int i = 0; i < x_wall.Length; i++)
-                if (!((x_plyr == x_wall[i]) && (y_plyr == y_wall[i])))
+                if (!((x_plyr + x == x_wall[i]) && (y_plyr + y == y_wall[i])))
                     return false;
             return true;
         }
@@ -160,5 +160,16 @@ namespace Get_to_the_exit
             Console.Write(vict);
             return true;
         }
+        //Calls all drawing functions
+        public void draw_all()
+        {
+            Console.Clear();
+            draw_cube();
+            draw_walls();
+            draw_pres();
+            draw_boxes();
+            draw_player();
+        }
+
     }
 }
